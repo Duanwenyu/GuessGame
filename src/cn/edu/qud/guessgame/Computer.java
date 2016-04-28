@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Computer extends Player {
 	private String playName=null;
 	private int winningTimes = 0;
-	private String comGuess=null;
+	private String comGuess=null;//µçÄÔ³öµÄÈ­
 	Scanner input = new Scanner(System.in);
 
 	public String getPlayName() {

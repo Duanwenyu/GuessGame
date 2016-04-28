@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Person extends Player {
 	private String playName = null;
 	private int winningTimes = 0;
-	private String myGuess=null;
+	private String myGuess=null;//Íæ¼Ò³öµÄÈ­
 	Scanner input = new Scanner(System.in);
 	
 	

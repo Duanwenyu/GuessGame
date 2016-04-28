@@ -3,8 +3,9 @@ package cn.edu.qud.guessgame;
 import java.util.Scanner;
 
 public class Judger {
-	private int total;
+	private int total;//总局数
 
+	//实例化对象
 	Computer computer=new Computer();
 	Person person=new Person();
 	
@@ -21,7 +22,7 @@ public class Judger {
 	}
 	
 	public void askName(){
-		//询问姓名5
+		//询问姓名
 		System.out.print("请选择对方角色（1.刘备 2.孙权 3.曹操）：");
 
 		computer.inputName();
@@ -50,10 +51,8 @@ public class Judger {
 				}else if(computer.getcomGuess().equals("石头")){
 					System.out.println("结果：^-^ 你输了，真笨！");
 					computer.setWinningTimes(computer.getWinningTimes()+1);
-					//comWin=comWin+1;
 				}else if(computer.getcomGuess().equals("布")){
 					System.out.println("结果：^-^ 你赢了，真厉害！");
-//					myWin=myWin+1;
 					person.setWinningTimes(person.getWinningTimes()+1);
 				}
 			}else if(person.getmyGuess().equals("石头")){
@@ -62,10 +61,8 @@ public class Judger {
 				}else if(computer.getcomGuess().equals("布")){
 					System.out.println("结果：^-^ 你输了，真笨！");
 					computer.setWinningTimes(computer.getWinningTimes()+1);
-//					comWin=comWin+1;
 				}else if(computer.getcomGuess().equals("剪刀")){
 					System.out.println("结果：^-^ 你赢了，真厉害！");
-//					myWin=myWin+1;
 					person.setWinningTimes(person.getWinningTimes()+1);
 				}
 			}else if(person.getmyGuess().equals("布")){
@@ -74,10 +71,8 @@ public class Judger {
 				}else if(computer.getcomGuess().equals("剪刀")){
 					System.out.println("结果：^-^ 你输了，真笨！");
 					computer.setWinningTimes(computer.getWinningTimes()+1);
-//					comWin=comWin+1;
 				}else if(computer.getcomGuess().equals("石头")){
 					System.out.println("结果：^-^ 你赢了，真厉害！");
-//					myWin=myWin+1;
 					person.setWinningTimes(person.getWinningTimes()+1);
 				}
 			}
@@ -88,6 +83,7 @@ public class Judger {
 
 		}
 	}
+	
 	public void finalResult(){
 		//游戏结果
 		if(yn.equals("n")){
